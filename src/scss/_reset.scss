@@ -1,0 +1,66 @@
+@charset 'utf-8';
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+section,
+article,
+header,
+footer,
+aside,
+nav {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  color: rgba(107, 114, 128);
+  &:hover {
+    color: rgb(55, 65, 81);
+  }
+}
+html,
+body {
+  font-size: 16px;
+}
+
+// common settings
+#skipNav {
+  a {
+    position: fixed;
+    width: 0px;
+    height: 1px;
+    top: -9999vh;
+    left: 0;
+    text-indent: -99999px;
+
+    &:focus,
+    &:active {
+      top: 0;
+      left: 0;
+      display: block;
+      padding: 10px;
+      width: 100%;
+      background: rgb(31, 31, 33);
+      text-indent: 0;
+      color: #fff;
+    }
+  }
+}
+
+.row-w {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}

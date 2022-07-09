@@ -1,0 +1,22 @@
+// 공통변수
+$border__radius: 6px;
+
+// 색상변수
+$blue: rgb(37, 99, 235);
+
+@mixin nmd-btn($bg) {
+  color: #fff;
+  padding: 0.5rem 2rem;
+  background: $bg;
+  border-radius: $border__radius;
+  &:hover {
+    background: lighten($bg, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: lighten($bg, 25%);
+  }
+}
+.nmdBtn {
+  @include nmd-btn($blue);
+}
